@@ -46,4 +46,16 @@ public class Rechnen {
         }
         return provison;
     }
+
+    public static double durchschnittjahr(){
+        /*
+        Initalsiere Array -> von Tinydb
+        double durchschnitt = 0;
+        for (int i = 0,i<=array.length;i++ {
+        durchschnitt = array.getElement[i] + durschnitt
+        }
+        durchschnitt = durchschnitt/array.length();
+        return durchschnitt;
+*/
+    }
 }
