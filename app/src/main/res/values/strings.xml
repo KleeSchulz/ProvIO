@@ -1,10 +1,31 @@
 <resources>
     <string name="app_name">ProvIO</string>
 
-    <!-- Hauptmenü -->
-    <string name="Einstellungen">Einstellungen</string>
+    <!-- Allgemein -->
+    <string name="ja">Ja</string>
+    <string name="nein">Nein</string>
     <!--*****************************************************************************************-->
 
+    <!-- Hauptmenü -->
+    <string name="Einstellungen">Einstellungen</string>
+    <string name="ErfasseTag">Erfasse Tag</string>
+    <!--*****************************************************************************************-->
+    <!--ErfasseTag-->
+    <string name="Verkauf">Verkauf in €</string>
+    <string name="Wieviel">Wie viel € verkauft?</string>
+    <string name="betrag">Betrag hinzufügen</string>
+    <string name="derBetrag">Der Betrag </string>
+    <string name="wurdehin"> € wurden hinzugefügt </string>
+    <string name="gerarbetet">Gearbeitete Stunden:</string>
+    <string name="Stunden">Stunden</string>
+    <string name="Statistik_Monat">Monatsstatistik</string>
+    <string name="stundenadd">Stunden hinzufügen</string>
+    <string name="Verkaufmonat">Verkauf Monat</string>
+    <string name="produktivität">Produktivität/Stunde</string>
+    <string name="ueberschreiben">Monatswerte überschreiben</string>
+    <string name="monatueberschreiben">Monat überschreiben?</string>
+    <string name="monatuberschreibenlang">Soll der Monat wirkich überschrieben werden? Kann nicht wieder hergestellt werden!</string>
+    <!--*****************************************************************************************-->
     <!--Einstellungen-->
     <string name="gehalt">Gehalt: </string>
     <string name="trage_gehalt">Trage Gehalt ein</string>

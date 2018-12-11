@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Einstellungen" />
-        <activity android:name=".zeiten"></activity>
+        <activity android:name=".Zeiten"></activity>
     </application>
 
 </manifest>
