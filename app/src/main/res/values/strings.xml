@@ -25,6 +25,7 @@
     <string name="ueberschreiben">Monatswerte überschreiben</string>
     <string name="monatueberschreiben">Monat überschreiben?</string>
     <string name="monatuberschreibenlang">Soll der Monat wirkich überschrieben werden? Kann nicht wieder hergestellt werden!</string>
+    <string name="abschliessen">Monat abschließen</string>
     <!--*****************************************************************************************-->
     <!--Einstellungen-->
     <string name="gehalt">Gehalt: </string>

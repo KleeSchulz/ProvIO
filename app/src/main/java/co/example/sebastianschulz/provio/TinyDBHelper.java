@@ -11,10 +11,10 @@ public class TinyDBHelper {
     public static String zweiteStaffelungProzent = "zweiteStaffelungProzent";
     public static String dritteStaffelungProzent = "dritteStaffelungProzent";
     public static String letzteStaffelungProzent = "letzteStaffelungProzent";
-    public static String ersteStaffelungStunde = "ersteStaffelungProzent";
-    public static String zweiteStaffelungStunde = "zweiteStaffelungProzent";
-    public static String dritteStaffelungStunde = "dritteStaffelungProzent";
-    public static String letzteStaffelungStunde = "letzteStaffelungProzent";
+    public static String ersteStaffelungStunde = "ersteStaffelungStunde";
+    public static String zweiteStaffelungStunde = "zweiteStaffelungStunde";
+    public static String dritteStaffelungStunde = "dritteStaffelungStunde";
+    public static String letzteStaffelungStunde = "letzteStaffelungStunde";
     //werden bei Zeiten gespeichert
     public static String VerkaufMonat = "VerkaufMonat";
     public static String ArbeitszeitMonat = "ArbeitszeitMonat";
