@@ -41,8 +41,8 @@ public class Zeiten extends AppCompatActivity {
                 double betrag = 0;
 
                 if (et_gehalt.getText() != null && et_gehalt.getText().length() > 0) {
-                    betrag = TinyDBHelper.gebeDouble(TinyDBHelper.VerkaufMonat) + Double.parseDouble(et_gehalt.getText().toString());
-                    TinyDBHelper.setzeDouble(TinyDBHelper.VerkaufMonat, betrag);
+                    betrag = TinyDBHelper.gebeDouble(TinyDBHelper.VerkaufeMonat) + Double.parseDouble(et_gehalt.getText().toString());
+                    TinyDBHelper.setzeDouble(TinyDBHelper.VerkaufeMonat, betrag);
                     ladestatistik();
                 }
             }
@@ -63,7 +63,7 @@ public class Zeiten extends AppCompatActivity {
 
     public void ladestatistik() {
         tv_gerarbeitet.setText(Double.toString(TinyDBHelper.gebeDouble(TinyDBHelper.ArbeitszeitMonat)));
-        tv_verkauf.setText(Double.toString(TinyDBHelper.gebeDouble(TinyDBHelper.VerkaufMonat)));
+        tv_verkauf.setText(Double.toString(TinyDBHelper.gebeDouble(TinyDBHelper.VerkaufeMonat)));
         String x = Double.toString(Rechnen.produktivität());
         tv_produkt.setText(x);
 
@@ -78,29 +78,24 @@ public class Zeiten extends AppCompatActivity {
     //Übershreiben des Monats
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        TinyDBHelper.setzeDouble(TinyDBHelper.ArbeitszeitMonat, 1.0);
-        TinyDBHelper.setzeDouble(TinyDBHelper.VerkaufMonat,0.0);
-        ladestatistik();
-
         new AlertDialog.Builder(Zeiten.this)
-                .setTitle(getResources().getString(R.string.monatueberschreiben))
-                .setMessage(getResources().getString(R.string.monatuberschreibenlang))
-                .setPositiveButton(getResources().getString(R.string.ja), new DialogInterface.OnClickListener() {
-                    @Override
+            .setTitle(getResources().getString(R.string.monatueberschreiben))
+            .setMessage(getResources().getString(R.string.monatuberschreibenlang))
+            .setPositiveButton(getResources().getString(R.string.ja), new DialogInterface.OnClickListener() {
+                @Override
                     public void onClick(DialogInterface dialog, int which) {
                         TinyDBHelper.setzeDouble(TinyDBHelper.ArbeitszeitMonat, 1.0);
-                        TinyDBHelper.setzeDouble(TinyDBHelper.VerkaufMonat,0.0);
+                        TinyDBHelper.setzeDouble(TinyDBHelper.VerkaufeMonat,0.0);
                         ladestatistik();
                         //todo Monatswechsel ins Array speichern!
                     }
                 })
-                .setNegativeButton(getResources().getString(R.string.nein), new DialogInterface.OnClickListener() {
+            .setNegativeButton(getResources().getString(R.string.nein), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+                dialog.dismiss();
                     }
-                })
-                .create().show();
+                }).create().show();
         return true;
     }
 }

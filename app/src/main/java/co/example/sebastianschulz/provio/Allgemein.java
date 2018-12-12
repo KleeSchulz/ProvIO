@@ -23,11 +23,11 @@ public class Allgemein extends Application {
     }
 
 
-    public static void toastshort(String text) {
-        Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
+    public static void toastshort(Context context,String text) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
     }
 
-    public static void toastlong(String text) {
-        Toast.makeText(getContext(), text, Toast.LENGTH_LONG);
+    public static void toastlong(Context context,String text) {
+        Toast.makeText(context, text, Toast.LENGTH_LONG);
     }
 }

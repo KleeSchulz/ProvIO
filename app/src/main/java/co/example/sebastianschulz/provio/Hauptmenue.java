@@ -22,9 +22,14 @@ public class Hauptmenue extends AppCompatActivity {
                 startActivity(new Intent(Hauptmenue.this,Zeiten.class));
             }
         });
-        btn_zeigeStunden = (Button)findViewById(R.id.btn_zeigeStunden);
         //Todo zeige Statistiken Monat
         btn_provision = (Button)findViewById(R.id.btn_Prov);
+        btn_provision.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Hauptmenue.this,StatistikMonat.class));
+            }
+        });
         //Todo zeige Gehalt und Statistiken
         btn_umsatz = (Button)findViewById(R.id.btn_umsatz);
         //todo zeige Jahresstatistik

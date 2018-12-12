@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class Einstellungen extends AppCompatActivity {
 
+    //todo Hardstrings durch Stringxml ersetzen
     Button btn_safe;
     EditText et_gehalt, et_fixum, et_ersteProzent,et_ersteGehalt, et_zweiteProzent,et_zweiteGehalt, et_dritteProzent, et_dritteGehalt,et_letzteProzent, et_letzteGehalt;
 
@@ -59,11 +60,11 @@ public class Einstellungen extends AppCompatActivity {
                         TinyDBHelper.setzeDouble(TinyDBHelper.letzteStaffelungProzent,Double.parseDouble(et_letzteProzent.getText().toString()));
                         TinyDBHelper.setzeDouble(TinyDBHelper.letzteStaffelungStunde,Double.parseDouble(et_letzteGehalt.getText().toString()));
                         ladeWerte();
-                        //Allgemein.toastshort(Allgemein.getContext().getResources().getString(R.string.toastgespeichert));
+                        Allgemein.toastshort(Einstellungen.this,"Daten wurden gespeichert");
                         ladeWerte();
                 }
                 else {
-                         //Allgemein.toastshort(Allgemein.getContext().getResources().getString(R.string.toastfehler));
+                         Allgemein.toastshort(Einstellungen.this,"Felder dürfen nicht leer sein!");
                 }
             }
         });

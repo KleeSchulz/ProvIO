@@ -16,7 +16,7 @@ public class TinyDBHelper {
     public static String dritteStaffelungStunde = "dritteStaffelungStunde";
     public static String letzteStaffelungStunde = "letzteStaffelungStunde";
     //werden bei Zeiten gespeichert
-    public static String VerkaufMonat = "VerkaufMonat";
+    public static String VerkaufeMonat = "VerkaufMonat";
     public static String ArbeitszeitMonat = "ArbeitszeitMonat";
 
 

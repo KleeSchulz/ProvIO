@@ -31,7 +31,7 @@
         android:inputType="textPersonName|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/tv_bekommen"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
