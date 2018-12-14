@@ -15,6 +15,7 @@ public class Hauptmenue extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hauptmenue);
 
+        // Zu Zeiten
         btn_arbeit = (Button)findViewById(R.id.btn_arbeit);
         btn_arbeit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,7 +23,8 @@ public class Hauptmenue extends AppCompatActivity {
                 startActivity(new Intent(Hauptmenue.this,Zeiten.class));
             }
         });
-        //Todo zeige Statistiken Monat
+
+        //zu StatistikMonat
         btn_provision = (Button)findViewById(R.id.btn_Prov);
         btn_provision.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,9 +32,18 @@ public class Hauptmenue extends AppCompatActivity {
                 startActivity(new Intent(Hauptmenue.this,StatistikMonat.class));
             }
         });
-        //Todo zeige Gehalt und Statistiken
+
+        //Zu Jahreswerte
         btn_umsatz = (Button)findViewById(R.id.btn_umsatz);
-        //todo zeige Jahresstatistik
+        btn_umsatz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Hauptmenue.this,Jahreswerte.class));
+            }
+        });
+
+
+        //Zu den Einstellungen
         btn_einstellung = (Button)findViewById(R.id.btn_einstellung);
         btn_einstellung.setOnClickListener(new View.OnClickListener() {
             @Override

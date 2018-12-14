@@ -22,6 +22,7 @@ public class StatistikMonat extends AppCompatActivity {
 
         tv_provjanein.setText(Double.toString(Rechnen.errchenenVerkauf()));
         if (Rechnen.gehaltunterschied()){
+            //todo Hardcodestring in stringdatei
             tv_provjanein.setText("Super! Du bekommst diesen Monat deine Provison");
             tv_gesamtgehalt.setText("Du hast Einnahmen von " + Rechnen.gehaltausgabe() + " durch Provision und Fixum.");
             tv_einnahemenprov.setText("Sie haben Einnahmen " + Rechnen.gewinnProv() +" € durch Verkauf. Sie bekommen " + Rechnen.gebeProzent() + " %.");

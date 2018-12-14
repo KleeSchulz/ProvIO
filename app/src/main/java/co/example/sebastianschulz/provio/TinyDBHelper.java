@@ -1,5 +1,7 @@
 package co.example.sebastianschulz.provio;
 
+import java.util.ArrayList;
+
 public class TinyDBHelper {
 
     TinyDB tinyDB = new TinyDB(Allgemein.activityPlaceholder );
@@ -18,7 +20,8 @@ public class TinyDBHelper {
     //werden bei Zeiten gespeichert
     public static String VerkaufeMonat = "VerkaufMonat";
     public static String ArbeitszeitMonat = "ArbeitszeitMonat";
-
+    //Jahresdurchschnitt
+    public static String VerkaufJahr = "VerkaufJahr";
 
  public static void setzeDouble(String key, Double wert) {
      TinyDB tinyDB = new TinyDB(Allgemein.activityPlaceholder);
@@ -28,5 +31,28 @@ public class TinyDBHelper {
      TinyDB tinyDB = new TinyDB(Allgemein.activityPlaceholder);
      double wert = tinyDB.getDouble(key,0);
       return wert;
+  }
+
+  public static ArrayList gebeArraydouble(String key){
+        TinyDB tinyDB = new TinyDB(Allgemein.activityPlaceholder);
+        ArrayList<Double>werte = tinyDB.getListDouble(key);
+
+        return werte;
+  }
+
+  public static int gebeAnzahlArray(String key){
+     int anzahl = 0;
+     anzahl = gebeArraydouble(key).size();
+     return anzahl;
+  }
+
+  public static void setzteMonat(String key,double monatswert){
+     TinyDB tinyDB = new TinyDB(Allgemein.activityPlaceholder);
+      ArrayList<Double>jahreswert = gebeArraydouble(key);
+      if (jahreswert.size()>11){
+          jahreswert.remove(0);
+      }
+      jahreswert.add(monatswert);
+      tinyDB.putListDouble(key,jahreswert);
   }
 }

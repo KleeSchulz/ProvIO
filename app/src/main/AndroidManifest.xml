@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Einstellungen" />
         <activity android:name=".Zeiten" />
-        <activity android:name=".StatistikMonat"></activity>
+        <activity android:name=".StatistikMonat" />
+        <activity android:name=".Jahreswerte"></activity>
     </application>
 
 </manifest>

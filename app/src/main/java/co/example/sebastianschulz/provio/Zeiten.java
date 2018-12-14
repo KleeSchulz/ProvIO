@@ -84,10 +84,10 @@ public class Zeiten extends AppCompatActivity {
             .setPositiveButton(getResources().getString(R.string.ja), new DialogInterface.OnClickListener() {
                 @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        TinyDBHelper.setzteMonat(TinyDBHelper.VerkaufJahr,TinyDBHelper.gebeDouble(TinyDBHelper.VerkaufJahr));
                         TinyDBHelper.setzeDouble(TinyDBHelper.ArbeitszeitMonat, 1.0);
                         TinyDBHelper.setzeDouble(TinyDBHelper.VerkaufeMonat,0.0);
                         ladestatistik();
-                        //todo Monatswechsel ins Array speichern!
                     }
                 })
             .setNegativeButton(getResources().getString(R.string.nein), new DialogInterface.OnClickListener() {
